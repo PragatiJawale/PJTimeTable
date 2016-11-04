@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Limit" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AI7-oH-5Nt">
+                                <rect key="frame" x="400" y="60" width="150" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ebp-kg-zFx"/>
+                                </constraints>
+                                <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ebp-kg-zFx"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHQ-Bf-C88">
+                                <rect key="frame" x="80" y="170" width="440" height="40"/>
+                                <color key="backgroundColor" red="0.44601809978485107" green="0.86704158782958984" blue="0.9104275107383728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Vsu-XC-rWE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.019204886630177498" green="0.015402085147798061" blue="0.01199168898165226" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y8n-Ws-cIv"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aR8-fb-cA6">
+                                <rect key="frame" x="20" y="230" width="560" height="350"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WSA-49-t2T">
+                                <rect key="frame" x="50" y="60" width="150" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HxQ-1E-b5C"/>
+                                    <constraint firstAttribute="width" constant="150" id="YZh-Cc-JAw"/>
+                                </constraints>
+                                <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91488605737686157" green="0.53909236192703247" blue="0.4876779317855835" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="aR8-fb-cA6" secondAttribute="trailing" id="4f6-Mg-DKh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EHQ-Bf-C88" secondAttribute="trailing" constant="60" id="5DZ-9B-1vF"/>
+                            <constraint firstItem="aR8-fb-cA6" firstAttribute="top" secondItem="EHQ-Bf-C88" secondAttribute="bottom" constant="20" id="7do-6R-fDL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AI7-oH-5Nt" secondAttribute="trailing" constant="30" id="9kC-qc-rm4"/>
+                            <constraint firstItem="aR8-fb-cA6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DRm-gw-HpY"/>
+                            <constraint firstItem="WSA-49-t2T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="Dje-AQ-DMQ"/>
+                            <constraint firstItem="EHQ-Bf-C88" firstAttribute="top" secondItem="AI7-oH-5Nt" secondAttribute="bottom" constant="60" id="TFB-qd-q6H"/>
+                            <constraint firstItem="AI7-oH-5Nt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="UYF-LQ-sXh"/>
+                            <constraint firstItem="WSA-49-t2T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="Y6R-tU-Jrf"/>
+                            <constraint firstItem="EHQ-Bf-C88" firstAttribute="top" secondItem="WSA-49-t2T" secondAttribute="bottom" constant="60" id="fly-70-muQ"/>
+                            <constraint firstItem="AI7-oH-5Nt" firstAttribute="height" secondItem="WSA-49-t2T" secondAttribute="height" id="lUO-mx-697"/>
+                            <constraint firstItem="AI7-oH-5Nt" firstAttribute="width" secondItem="WSA-49-t2T" secondAttribute="width" id="nIu-5D-4m6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aR8-fb-cA6" secondAttribute="bottom" constant="20" id="o7N-zf-IT9"/>
+                            <constraint firstItem="EHQ-Bf-C88" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="rRB-05-DwU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calculateButton" destination="EHQ-Bf-C88" id="cY6-Dj-nQf"/>
+                        <outlet property="limitField" destination="AI7-oH-5Nt" id="x2Q-NP-w28"/>
+                        <outlet property="numberField" destination="WSA-49-t2T" id="32F-13-uww"/>
+                        <outlet property="numberTableView" destination="aR8-fb-cA6" id="E9m-Hs-kc8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
